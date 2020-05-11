@@ -1,15 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
+Alpha <- matrix(c(1,2,3,4),2,2)
 
-## Write a short comment describing this function
+#solve(Alpha) 
+Beta <- makeCacheMatrix(Alpha)
 
-makeCacheMatrix <- function(x = matrix()) {
-
-}
-
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
+cacheSolve(Beta) #inverse returned after computation
+##      [,1] [,2]
+## [1,]   -2  1.5
+## [2,]    1 -0.5
+cacheSolve(Beta) #inverse returned from cache
+## getting cached data
+##      [,1] [,2]
+## [1,]   -2  1.5
+## [2,]    1 -0.5
